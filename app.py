@@ -44,7 +44,7 @@ class Graph:
                 path = path[::-1]
                 interchange = []
 
-                for (i in range(len(lines)-1):
+                for i in range(0,len(lines)-1):
                     if (lines[i]!=lines[i+1]):
                         interchange.append(path[i])                    
 
