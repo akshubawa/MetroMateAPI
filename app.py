@@ -42,12 +42,18 @@ class Graph:
 
                 lines = lines[::-1]
                 path = path[::-1]
+                interchange = []
+
+                for (i in range(len(lines)-1):
+                    if (lines[i]!=lines[i+1]):
+                        interchange.append(path[i])                    
 
                 return {
                     "source": source,
                     "destination": destination,
                     "number_of_stations": len(path),
                     "number_of_interchanges": sum(lines[i] != lines[i + 1] for i in range(len(lines) - 1)),
+                    "interchange": interchange,
                     "time": len(path) * 2.5,
                     "path": path,
                     "lines": lines
